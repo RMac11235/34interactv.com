@@ -24,3 +24,9 @@ address{line-height:1.6}
 .btn{display:inline-block;background:#14213d;color:#fff;text-decoration:none;font-weight:600;padding:9px 16px;border-radius:8px;margin:4px 8px 4px 0}
 .btn:hover{background:#1f5fbf}.btn.ghost{background:transparent;color:#14213d;border:1px solid #c9d1de}.btn.ghost:hover{background:#f0f3f8}
 .price{font-weight:600;color:#14213d;margin:.2em 0}
+
+img{max-width:100%;height:auto}
+.cards article .icon{max-width:56px}
+table{display:block;overflow-x:auto}
+footer a,nav a{display:inline-block;padding:4px 0}
+@media(max-width:600px){nav{width:100%}nav a{margin:0 14px 6px 0;padding:6px 0}}
