@@ -38,6 +38,7 @@ main h2::before{content:"";flex:0 0 auto;width:28px;height:6px;border-radius:6px
 .meta{color:var(--muted);font-size:.92rem}
 .status{font-weight:700;color:var(--status)}
 .price{font-weight:700;color:var(--ink);margin:.2em 0}
+.platforms{color:var(--muted);font-size:.92rem;margin:.15em 0}
 main{padding-top:30px;padding-bottom:48px}
 
 /* Buttons */
