@@ -15,7 +15,7 @@ LANGS = {'es': ('es_LA', 'Español'), 'ko': ('ko_KR', '한국어')}  # Spanish i
 
 # Legal pages (privacy, per-app privacy, terms, data deletion) are published in es/ko only after review.
 # While False, es/ko legal pages are not generated and translated pages link to the English legal pages.
-PUBLISH_LEGAL = False
+PUBLISH_LEGAL = True
 DISCLAIMER = {
     'es': 'Si esta traducción y la versión en inglés difieren, prevalece la versión en inglés.',
     'ko': '이 번역본과 영어 원문이 서로 다를 경우 영어 원문이 우선합니다.',
