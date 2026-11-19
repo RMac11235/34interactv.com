@@ -274,3 +274,6 @@ footer a{padding:4px 0}
   .fb-post{grid-template-columns:minmax(0,1fr);padding:12px}
   .fb-votes{flex-direction:row;justify-content:flex-start;gap:8px}
 }
+
+/* Korean: wrap between words, not inside them */
+html:lang(ko) body{word-break:keep-all;overflow-wrap:anywhere}
