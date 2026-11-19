@@ -10,7 +10,7 @@ Web app: Firebase project `interactv-d20a3` (Spark). Auth is Email/Password and 
 
 `apps/{appId}/feedback/{postId}`
 
-`appId` must be one of: `glydekeys`, `vaultdrill`, `anchorline`, `truckworth`, `vigil`, `brewworth`, `washworth`, `knowncallers`, `plumbline`, `pegasus`, `skylease`.
+`appId` must be one of: `glydekeys`, `vaultdrill`, `anchorline`, `truckworth`, `vigil`, `brewworth`, `washworth`, `knowncallers`, `cut`, `repriserise`, `plumbline`, `pegasus`, `skylease`.
 
 | Field | Type | Rules |
 | --- | --- | --- |

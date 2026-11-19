@@ -156,7 +156,7 @@ footer a{padding:4px 0}
 .home .cards h3 a:hover{color:var(--a)}
 .home .cards article .icon{box-shadow:0 8px 18px -8px var(--a)}
 [data-app=vaultdrill]{--a:#0f7a5f}[data-app=glydekeys]{--a:#5b4ff0}[data-app=anchorline]{--a:#1e70b0}[data-app=truckworth]{--a:#1f4e79}
-[data-app=vigil]{--a:#a37a1f}[data-app=reprise]{--a:#3f5c6e}[data-app=brewworth]{--a:#6b4226}[data-app=washworth]{--a:#146079}[data-app=knowncallers]{--a:#1b3a5d}
+[data-app=vigil]{--a:#a37a1f}[data-app=repriserise]{--a:#3f5c6e}[data-app=brewworth]{--a:#6b4226}[data-app=washworth]{--a:#146079}[data-app=knowncallers]{--a:#1b3a5d}[data-app=cut]{--a:#8b4a38}
 [data-app=plumbline]{--a:#e07a00}[data-app=pegasus]{--a:#d23c1c}[data-app=skylease]{--a:#b0238a}
 
 /* ---------- Games (dark) ---------- */

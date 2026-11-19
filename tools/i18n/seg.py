@@ -87,7 +87,7 @@ def needs(core):
     return True
 
 NAMES = ['Pegasus: A Call To Arms', 'Known Callers', 'VaultDrill', 'GlydeKeys', 'AnchorLine', 'TruckWorth',
-         'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil', 'Reprise']
+         'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil', 'RepRise', 'Cut']
 NAME_RE = re.compile('|'.join(re.escape(n) for n in NAMES))
 TAG_RE = re.compile(r'<([a-zA-Z][a-zA-Z0-9]*)(\s[^>]*)?>')
 
