@@ -103,6 +103,12 @@ footer a{padding:4px 0}
 .app-hero .lede{font-size:1.3rem;font-weight:600;color:#fff}
 .app-hero .tagline{color:var(--tag);font-size:1.45rem}
 .app-hero a{color:#fff}
+.app-hero .offer{display:inline-block;margin:.55em 0 .15em;padding:.5em 1em;border-radius:12px;font-weight:800;line-height:1.35;background:var(--tag);color:var(--hdr);max-width:100%}
+.app-hero .btn{color:var(--accent-ink)}
+.app-hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.5);box-shadow:none}
+.app-hero .hero-cta{margin:.85em 0 0}
+.why{margin:0 0 1.2em}
+.home .cards{margin-bottom:2.4em}
 .hero-art{position:relative;display:grid;place-items:center;min-height:240px}
 .hero-art img{position:relative;z-index:1;width:200px;height:200px;border-radius:44px;box-shadow:0 26px 50px -16px rgba(0,0,0,.6),0 0 0 6px rgba(255,255,255,.12)}
 .hero-art .orb{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,var(--glow,rgba(255,255,255,.28)) 0,transparent 66%)}
