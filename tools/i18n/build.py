@@ -73,7 +73,7 @@ def fix_korean_particles(s):
     # Choose 은/는, 이/가, 을/를, 과/와, 으로/로 after a product name by its final Korean reading.
     batchim = {'VaultDrill': 'l', 'AnchorLine': 'n', 'Plumbline': 'n', 'Vigil': 'l'}
     names = ['Pegasus: A Call To Arms', 'Known Callers', 'VaultDrill', 'GlydeKeys', 'AnchorLine', 'TruckWorth',
-             'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil Pro', 'Vigil', 'Plus', 'Caddy']
+             'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil Pro', 'Vigil', 'Reprise', 'Plus', 'Caddy']
     pat = re.compile('(' + '|'.join(re.escape(n) for n in names) + r')(</a>|</strong>)?(은\(는\)|이\(가\)|을\(를\)|과\(와\)|와\(과\))')
     def r(m):
         name, close, p = m.group(1), m.group(2) or '', m.group(3)
