@@ -1,0 +1,89 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Known product slugs used on 34interactv.com.
+    function knownApp(id) {
+      return id in [
+        'glydekeys', 'vaultdrill', 'anchorline', 'truckworth', 'vigil',
+        'brewworth', 'washworth', 'knowncallers', 'plumbline', 'pegasus', 'skylease'
+      ];
+    }
+    function knownGame(id) {
+      return id in ['plumbline', 'pegasus', 'skylease'];
+    }
+
+    function signedIn() {
+      return request.auth != null && request.auth.uid != null;
+    }
+
+    // Posts: title 1-80, body 1-2000, authorName 1-40, authorUid must be the signer,
+    // createdAt must be a server timestamp. Score is computed client-side from votes.
+    function validPost() {
+      let d = request.resource.data;
+      return signedIn()
+        && d.keys().hasOnly(['title', 'body', 'authorUid', 'authorName', 'createdAt'])
+        && d.authorUid == request.auth.uid
+        && d.authorName is string
+        && d.authorName.size() >= 1
+        && d.authorName.size() <= 40
+        && d.title is string
+        && d.title.size() >= 1
+        && d.title.size() <= 80
+        && d.body is string
+        && d.body.size() >= 1
+        && d.body.size() <= 2000
+        && d.createdAt == request.time;
+    }
+
+    function validVote() {
+      let d = request.resource.data;
+      return signedIn()
+        && d.keys().hasOnly(['value'])
+        && d.value is number
+        && (d.value == 1 || d.value == -1);
+    }
+
+    // Feedback suggestions: one board per app.
+    match /apps/{appId}/feedback/{postId} {
+      allow read: if true;
+      allow create: if knownApp(appId) && validPost();
+      allow update: if false;
+      allow delete: if signedIn() && resource.data.authorUid == request.auth.uid;
+
+      match /votes/{uid} {
+        allow read: if true;
+        allow create, update: if signedIn() && uid == request.auth.uid && validVote();
+        allow delete: if signedIn() && uid == request.auth.uid;
+      }
+    }
+
+    // Game message boards (Plumbline, Pegasus, Skylease only).
+    match /games/{gameId}/messages/{postId} {
+      allow read: if true;
+      allow create: if knownGame(gameId) && validPost();
+      allow update: if false;
+      allow delete: if signedIn() && resource.data.authorUid == request.auth.uid;
+
+      match /votes/{uid} {
+        allow read: if true;
+        allow create, update: if signedIn() && uid == request.auth.uid && validVote();
+        allow delete: if signedIn() && uid == request.auth.uid;
+      }
+    }
+
+    // Leaderboards. Public read. All client writes are denied.
+    // Games submit scores later through the Firebase Admin SDK (bypasses these
+    // rules) or through a future, documented rule change for the game apps.
+    // Document shape is in FIREBASE-BOARDS.md.
+    match /games/{gameId}/scores/{scoreId} {
+      allow read: if knownGame(gameId);
+      allow create, update, delete: if false;
+    }
+
+    // Deny everything else (production mode default).
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
