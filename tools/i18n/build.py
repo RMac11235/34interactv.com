@@ -11,7 +11,21 @@ from seg import segments, needs, canon, uncanon
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 SITE = 'https://34interactv.com'
-LANGS = {'es': ('es_ES', 'Español'), 'ko': ('ko_KR', '한국어')}
+LANGS = {'es': ('es_LA', 'Español'), 'ko': ('ko_KR', '한국어')}  # Spanish is neutral Latin American
+
+# Legal pages (privacy, per-app privacy, terms, data deletion) are published in es/ko only after review.
+# While False, es/ko legal pages are not generated and translated pages link to the English legal pages.
+PUBLISH_LEGAL = False
+DISCLAIMER = {
+    'es': 'Si esta traducción y la versión en inglés difieren, prevalece la versión en inglés.',
+    'ko': '이 번역본과 영어 원문이 서로 다를 경우 영어 원문이 우선합니다.',
+}
+
+def is_legal(rel):
+    return rel in ('privacy.html', 'terms.html', 'data-deletion.html') or rel.startswith('privacy/')
+
+def available(rel):
+    return PUBLISH_LEGAL or not is_legal(rel)
 SKIP = {'404.html'}  # GitHub Pages serves only the root 404 page
 START, END = '<!--i18n:start-->', '<!--i18n:end-->'
 
@@ -32,13 +46,15 @@ def strip_i18n(src):
     return re.sub(re.escape(START) + r'.*?' + re.escape(END), '', src, flags=re.S)
 
 def head_links(rel, lang):
+    if not available(rel): return ''
     links = [f'<link rel="alternate" hreflang="en" href="{SITE}{pretty(rel)}">']
     for l in LANGS: links.append(f'<link rel="alternate" hreflang="{l}" href="{SITE}{pretty(rel, l)}">')
     links.append(f'<link rel="alternate" hreflang="x-default" href="{SITE}{pretty(rel)}">')
     return START + ''.join(links) + END
 
 def switcher(rel, lang):
-    items = [('en', 'English', pretty(rel))] + [(l, LANGS[l][1], pretty(rel, l)) for l in LANGS]
+    # An untranslated legal page sends es/ko visitors to that language's home page.
+    items = [('en', 'English', pretty(rel))] + [(l, LANGS[l][1], pretty(rel if available(rel) else 'index.html', l)) for l in LANGS]
     a = []
     for code, name, href in items:
         cur = ' aria-current="true"' if code == lang else ''
@@ -75,9 +91,16 @@ def rewrite_urls(src, rel, lang):
         if url.startswith('/'):
             if path.endswith('.html') or path == '/' or re.match(r'^/privacy(/[a-z]*)?$', path) or \
                re.match(r'^/(?:support|contact|terms|data-deletion|index|privacy|' + '|'.join(APPS) + r')$', path):
+                tgt = path.lstrip('/')
+                tgt = (tgt + 'index.html') if (tgt.endswith('/') or tgt == '') else (tgt if tgt.endswith('.html') else tgt + '.html')
+                if not available(tgt): return m.group(0)  # legal page not yet translated: keep English
                 return f'{attr}="/{lang}{url}"'
             return m.group(0)
-        if path.endswith('.html') or path == '': return m.group(0)  # relative page link: stays in the language folder
+        if path.endswith('.html') or path == '':
+            target = os.path.normpath(os.path.join(base, path)).replace(os.sep, '/') if path else rel
+            if path and not available(target):  # legal page not yet translated: link to English
+                return f'{attr}="{pretty(target)}{url[len(path):]}"'
+            return m.group(0)  # relative page link: stays in the language folder
         absu = '/' + os.path.normpath(os.path.join(base, url)).replace(os.sep, '/').lstrip('./')
         return f'{attr}="{absu}"'
     return re.sub(r'\b(href|src)="([^"]*)"', fix, src)
@@ -116,6 +139,10 @@ def main():
         src = strip_i18n(open(path, encoding='utf-8').read())
         open(path, 'w', encoding='utf-8').write(add_chrome(src, rel, 'en'))
         for lang, (locale, _) in LANGS.items():
+            dst = os.path.join(ROOT, lang, rel)
+            if not available(rel):
+                if os.path.exists(dst): os.remove(dst)
+                continue
             missing = {}
             t = translate(src, tables[lang], missing, rel)
             t = re.sub(r'<html lang="en"', f'<html lang="{lang}"', t, count=1)
@@ -125,15 +152,16 @@ def main():
             t = re.sub(r'(<link rel="canonical" href=")[^"]*(")', r'\g<1>' + canon_url + r'\2', t)
             t = re.sub(r'(<meta property="og:url" content=")[^"]*(")', r'\g<1>' + canon_url + r'\2', t)
             if lang == 'ko': t = fix_korean_particles(t)
+            if is_legal(rel):
+                t = t.replace('</h1>', f'</h1>\n<p class="note small translation-note">{DISCLAIMER[lang]}</p>', 1)
             t = add_chrome(t, rel, lang)
-            dst = os.path.join(ROOT, lang, rel)
             os.makedirs(os.path.dirname(dst), exist_ok=True)
             open(dst, 'w', encoding='utf-8').write(t)
             for k, v in missing.items(): report.setdefault(lang, {}).setdefault(k, v)
     # sitemap
     urls = []
     for rel in pages():
-        for l in [None] + list(LANGS):
+        for l in [None] + (list(LANGS) if available(rel) else []):
             urls.append(f'  <url><loc>{SITE}{pretty(rel, l)}</loc></url>')
     open(os.path.join(ROOT, 'sitemap.xml'), 'w').write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(urls) + '\n</urlset>\n')
