@@ -153,6 +153,10 @@ function bindAuth(root, onChange) {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(cred.user, { displayName: name });
+      // onAuthStateChanged already fired before the profile had a name; refresh the header now.
+      try { await cred.user.reload(); } catch (_) { /* keep the name we just set */ }
+      if (who) who.textContent = displayName(auth.currentUser) || name;
+      if (onChange) onChange(auth.currentUser);
     } catch (e) {
       setStatus(msg, friendlyError(e), true);
     }

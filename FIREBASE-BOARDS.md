@@ -2,7 +2,7 @@
 
 Web app: Firebase project `interactv-d20a3` (Spark). Auth is Email/Password and Google. The site reads and writes Firestore from `community-firebase.js` (modular SDK 13.4.0). Score on a post is the sum of its `votes` documents, computed in the browser. The web app never writes leaderboard scores.
 
-`community.js` (giscus) is unchanged and still works if a page loads it. App pages on this branch load `community-firebase.js` instead.
+`community.js` (giscus) is unchanged and still works if a page loads it. App pages load `community-firebase.js` instead.
 
 ## Collections
 
