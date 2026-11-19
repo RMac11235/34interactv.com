@@ -43,7 +43,8 @@ def pretty(rel, lang=None):
     return '/' + (lang + '/' if lang else '') + p
 
 def strip_i18n(src):
-    return re.sub(re.escape(START) + r'.*?' + re.escape(END), '', src, flags=re.S)
+    src = re.sub(re.escape(START) + r'.*?' + re.escape(END), '', src, flags=re.S)
+    return re.sub(r'\n+</head>', '\n</head>', src, count=1)
 
 def head_links(rel, lang):
     if not available(rel): return ''
@@ -63,7 +64,8 @@ def switcher(rel, lang):
     return START + f'<div class="lang-switch" role="navigation" aria-label="{label}">' + ''.join(a) + '</div>' + END
 
 def add_chrome(src, rel, lang):
-    src = src.replace('</head>', head_links(rel, lang) + '\n</head>', 1)
+    links = head_links(rel, lang)
+    if links: src = src.replace('\n</head>', '\n' + links + '\n</head>', 1)
     src = src.replace('</nav>', '</nav>' + switcher(rel, lang), 1)
     return src
 
