@@ -5,3 +5,4 @@ pubsub-debug.log
 ui-debug.log
 *.log
 node_modules
+__pycache__/
