@@ -6,7 +6,7 @@ service cloud.firestore {
     function knownApp(id) {
       return id in [
         'glydekeys', 'vaultdrill', 'anchorline', 'truckworth', 'vigil',
-        'brewworth', 'washworth', 'knowncallers', 'plumbline', 'pegasus', 'skylease'
+        'brewworth', 'washworth', 'knowncallers', 'cut', 'repriserise', 'plumbline', 'pegasus', 'skylease'
       ];
     }
     function knownGame(id) {

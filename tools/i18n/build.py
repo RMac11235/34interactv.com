@@ -1,4 +1,4 @@
-"""Build /es/ and /ko/ copies of every English page, and add hreflang + a language switcher to all pages.
+"""Build /es/, /ko/ and /ja/ copies of every English page, and add hreflang + a language switcher to all pages.
 
 Usage: python3 tools/i18n/build.py
 Translations live in tools/i18n/es.json and ko.json, keyed by the English segment with tag attributes
@@ -11,7 +11,7 @@ from seg import segments, needs, canon, uncanon
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
 SITE = 'https://34interactv.com'
-LANGS = {'es': ('es_LA', 'Español'), 'ko': ('ko_KR', '한국어')}  # Spanish is neutral Latin American
+LANGS = {'es': ('es_LA', 'Español'), 'ko': ('ko_KR', '한국어'), 'ja': ('ja_JP', '日本語')}  # Spanish is neutral Latin American
 
 # Legal pages (privacy, per-app privacy, terms, data deletion) are published in es/ko only after review.
 # While False, es/ko legal pages are not generated and translated pages link to the English legal pages.
@@ -19,6 +19,7 @@ PUBLISH_LEGAL = True
 DISCLAIMER = {
     'es': 'Si esta traducción y la versión en inglés difieren, prevalece la versión en inglés.',
     'ko': '이 번역본과 영어 원문이 서로 다를 경우 영어 원문이 우선합니다.',
+    'ja': 'この翻訳と英語版が異なる場合は、英語版が優先します。',
 }
 
 def is_legal(rel):
@@ -60,7 +61,7 @@ def switcher(rel, lang):
     for code, name, href in items:
         cur = ' aria-current="true"' if code == lang else ''
         a.append(f'<a href="{href}" hreflang="{code}" lang="{code}"{cur}>{name}</a>')
-    label = {'en': 'Language', 'es': 'Idioma', 'ko': '언어'}[lang]
+    label = {'en': 'Language', 'es': 'Idioma', 'ko': '언어', 'ja': '言語'}[lang]
     return START + f'<div class="lang-switch" role="navigation" aria-label="{label}">' + ''.join(a) + '</div>' + END
 
 def add_chrome(src, rel, lang):
@@ -71,9 +72,9 @@ def add_chrome(src, rel, lang):
 
 def fix_korean_particles(s):
     # Choose 은/는, 이/가, 을/를, 과/와, 으로/로 after a product name by its final Korean reading.
-    batchim = {'VaultDrill': 'l', 'AnchorLine': 'n', 'Plumbline': 'n', 'Vigil': 'l'}
+    batchim = {'VaultDrill': 'l', 'AnchorLine': 'n', 'Plumbline': 'n', 'Vigil': 'l', 'Cut': 't'}
     names = ['Pegasus: A Call To Arms', 'Known Callers', 'VaultDrill', 'GlydeKeys', 'AnchorLine', 'TruckWorth',
-             'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil Pro', 'Vigil', 'Plus', 'Caddy']
+             'BrewWorth', 'WashWorth', 'Plumbline', 'Pegasus', 'Skylease', 'Vigil Pro', 'Vigil', 'RepRise', 'Cut', 'Plus', 'Caddy']
     pat = re.compile('(' + '|'.join(re.escape(n) for n in names) + r')(</a>|</strong>)?(은\(는\)|이\(가\)|을\(를\)|과\(와\)|와\(과\))')
     def r(m):
         name, close, p = m.group(1), m.group(2) or '', m.group(3)
