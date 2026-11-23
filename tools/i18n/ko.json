@@ -573,5 +573,19 @@
  "III-IV Interactive makes {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10} and {11}.": "III-IV Interactive는 {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}을(를) 만듭니다.",
  "Find and switch off the preinstalled apps, settings, and permissions that drain your battery and leak your data.": "미리 설치된 앱, 설정, 권한 가운데 배터리를 닳게 하고 데이터를 새게 하는 것을 찾아 끌 수 있습니다.",
  "Tuned for Samsung Galaxy (Verizon and unlocked) and Pixel. Battery savings shown are estimates.": "Samsung Galaxy(Verizon 및 잠금 해제)와 Pixel에 맞춰 조정되어 있습니다. 표시되는 배터리 절감량은 추정치입니다.",
- "III-IV Interactive makes {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11} and {12}.": "III-IV Interactive는 {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}을(를) 만듭니다."
+ "III-IV Interactive makes {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11} and {12}.": "III-IV Interactive는 {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}을(를) 만듭니다.",
+ "III-IV Interactive makes {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12} and {13}, and is developing {14}, {15}, {16}, {17} and {18}.": "III-IV Interactive는 {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}을(를) 만들고, {14}, {15}, {16}, {17}, {18}을(를) 개발하고 있습니다.",
+ "Contractor tools": "시공업체용 도구",
+ "Measure by voice. Estimate and invoice on the spot.": "말로 측정하고, 현장에서 바로 견적과 청구서를.",
+ "Voice estimating for flooring and lighting contractors. Walk the job and say the measurements. {0} summarizes them, you approve the numbers, and then you save the estimate or invoice.": "바닥재·조명 시공업체를 위한 음성 견적 앱입니다. 현장을 둘러보며 치수를 말하면 앱이 요약해 줍니다. 숫자를 승인한 뒤 견적서나 청구서를 저장하세요.",
+ "<a>Visit measurelypro.com</a>": "<a>measurelypro.com 방문하기</a>",
+ "New games in development": "개발 중인 새 게임",
+ "Restore a run-down flower farm and its shop. Customers order bouquets in colors that don't exist yet, so you breed them: pick the parents, predict what the seeds will bloom, then arrange a bouquet that fits the order and the budget.": "낡은 꽃 농장과 농장 입구의 작은 가게를 되살리세요. 손님들은 아직 존재하지 않는 색의 꽃다발을 주문합니다. 부모 꽃을 고르고 씨앗에서 어떤 꽃이 필지 예측해 교배한 뒤, 주문과 예산에 맞는 꽃다발을 만드세요.",
+ "Android first, then iPhone": "Android 먼저, 이후 iPhone",
+ "In development": "개발 중",
+ "Build a fighting robot out of junkyard scrap. Every part costs weight, power, and a slot, so you rebuild for each arena's rule, then drive and aim it yourself. Win, salvage the loser's parts, and climb the circuit.": "고철장 부품으로 전투 로봇을 만드세요. 모든 부품에는 무게, 전력, 슬롯 비용이 있어 경기장마다 정해진 규칙에 맞춰 다시 조립하고, 직접 조종하고 조준합니다. 이기면 상대의 부품을 회수하고 리그를 올라가세요.",
+ "Run a small yarn shop where customers bring problems, not orders. Choose the yarn, stitch, and pattern that solve each one, then knit it in a rhythm-and-pattern puzzle that rewards a steady hand.": "손님들이 주문 대신 고민을 들고 오는 작은 털실 가게를 운영하세요. 고민마다 알맞은 실, 뜨개법, 패턴을 고른 뒤, 손이 안정될수록 잘 되는 리듬·패턴 퍼즐로 직접 떠 보세요.",
+ "Run a small ranch of ponies and pups, each with its own personality. Learn what each animal needs, then breed and train for the county shows so the right animal is ready on show day.": "저마다 성격이 다른 포니와 강아지가 사는 작은 목장을 운영하세요. 동물마다 무엇이 필요한지 알아 가고, 군 대회에 맞춰 교배하고 훈련해 대회 당일 알맞은 동물이 준비되게 하세요.",
+ "Walk the last supply truck across a zombie-filled country in a side-scroller where you aim every shot. Split your scrap between your guns and the truck, and pick ammo to match the zombies scouted ahead.": "좀비로 가득한 땅을 건너는 마지막 보급 트럭 옆을 걸으며, 모든 총알을 직접 조준하는 횡스크롤 게임입니다. 고철을 총과 트럭에 나눠 쓰고, 앞서 정찰한 좀비에 맞춰 탄약을 고르세요.",
+ "{0}, {1}, {2}, {3} and {4} are working titles. They are early in development, with no prices or release dates yet.": "{0}, {1}, {2}, {3}, {4}은(는) 가제입니다. 아직 개발 초기 단계이며 가격과 출시일은 정해지지 않았습니다."
 }
