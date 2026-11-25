@@ -198,6 +198,14 @@ footer a{padding:4px 0}
 .t-bloomcross .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(243,209,138,.7),rgba(176,67,111,.35) 45%,transparent 68%)}
 .t-bloomcross main>ol>li:nth-child(3n+1)::before{background:#1c5c3e}.t-bloomcross main>ol>li:nth-child(3n+2)::before{background:#b0436f}.t-bloomcross main>ol>li:nth-child(3n)::before{background:#f3d18a}
 
+/* ---------- Stitchwise (yarn shop / lavender, matches the r1 shop screen) ---------- */
+.t-stitchwise{--bg:#faf6f1;--ink:#2a1f3a;--muted:#6a5d78;--card:#ffffff;--line:#e8dfea;--accent:#6a4f9c;--accent-ink:#f8f4ff;--a2:#c9a227;--link:#5b3d8a;--status:#5b3d8a;--shadow:0 10px 30px -16px rgba(42,31,58,.25);--hdr:#5b3d8a;--hero1:#5b3d8a;--hero2:#9b6ab8;--tag:#efe4c8;--glow:rgba(106,79,156,.35);--hfont:Georgia,"Palatino Linotype",serif;--hweight:700;--hcase:none;--hspace:0;--hstyle:normal;
+  --hero-pattern:repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.1) 14px 16px);
+  --hero-floor-h:48px;--hero-floor:linear-gradient(#efe4c8,#e4d6ef)}
+.t-stitchwise footer{background:#5b3d8a}
+.t-stitchwise .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(239,228,200,.75),rgba(155,106,184,.4) 45%,transparent 68%)}
+.t-stitchwise main>ol>li:nth-child(3n+1)::before{background:#6a4f9c}.t-stitchwise main>ol>li:nth-child(3n+2)::before{background:#c9a227}.t-stitchwise main>ol>li:nth-child(3n)::before{background:#9b6ab8}
+
 /* ---------- Vigil (night/gold) ---------- */
 .t-vigil{--bg:#0b0e13;--card:#151a22;--line:#2a303b;--accent:#d4a547;--accent-ink:#17120a;--a2:#e9c46a;--link:#e9c46a;--status:#e9c46a;--hdr:#0b0e13;--hero1:#06090d;--hero2:#1c1f27;--tag:#e9c46a;--glow:rgba(212,165,71,.35);--hfont:Georgia,"Times New Roman",serif;--hweight:700}
 .t-vigil .hero-art .orb{width:260px;height:260px;background:conic-gradient(#e9c46a 0 70%,rgba(233,196,106,.12) 70% 100%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%)}
