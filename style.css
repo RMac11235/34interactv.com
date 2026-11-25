@@ -225,6 +225,14 @@ footer a{padding:4px 0}
 .t-showfield .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(243,209,138,.7),rgba(107,143,78,.4) 45%,transparent 68%)}
 .t-showfield main>ol>li:nth-child(3n+1)::before{background:#2f7046}.t-showfield main>ol>li:nth-child(3n+2)::before{background:#e09a3c}.t-showfield main>ol>li:nth-child(3n)::before{background:#6b8f4e}
 
+/* ---------- Scrap Convoy (charcoal / convoy orange, matches the r1 home screen) ---------- */
+.t-scrapconvoy{--bg:#16181c;--ink:#e8eaed;--muted:#9aa3ad;--card:#1f2228;--line:#3a4149;--accent:#e07020;--accent-ink:#1a1008;--a2:#c4a574;--link:#f0a15a;--status:#f0a15a;--shadow:0 10px 30px -12px rgba(0,0,0,.65);--hdr:#121418;--hero1:#1b1d21;--hero2:#2a3038;--tag:#e07020;--glow:rgba(224,112,32,.4);--hfont:Georgia,"Palatino Linotype",serif;--hweight:700;--hcase:none;--hspace:0;--hstyle:normal;
+  --hero-pattern:radial-gradient(circle at 18px 16px,rgba(224,112,32,.18) 2px,transparent 3px);
+  --hero-pattern-size:88px 76px}
+.t-scrapconvoy footer{background:#101216}
+.t-scrapconvoy .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(224,112,32,.55),rgba(42,48,56,.45) 50%,transparent 70%)}
+.t-scrapconvoy main>ol>li:nth-child(3n+1)::before{background:#e07020}.t-scrapconvoy main>ol>li:nth-child(3n+2)::before{background:#c4a574}.t-scrapconvoy main>ol>li:nth-child(3n)::before{background:#6b7280}
+
 /* ---------- Vigil (night/gold) ---------- */
 .t-vigil{--bg:#0b0e13;--card:#151a22;--line:#2a303b;--accent:#d4a547;--accent-ink:#17120a;--a2:#e9c46a;--link:#e9c46a;--status:#e9c46a;--hdr:#0b0e13;--hero1:#06090d;--hero2:#1c1f27;--tag:#e9c46a;--glow:rgba(212,165,71,.35);--hfont:Georgia,"Times New Roman",serif;--hweight:700}
 .t-vigil .hero-art .orb{width:260px;height:260px;background:conic-gradient(#e9c46a 0 70%,rgba(233,196,106,.12) 70% 100%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%)}
