@@ -92,6 +92,8 @@ address{font-style:normal;line-height:1.6}
 .shots figure:hover{transform:translateY(-6px) rotate(-1deg)}
 .shots img{width:100%;height:auto;display:block;border-radius:22px;border:6px solid #0c111c;background:#0c111c;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
 .shots figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:8px}
+.shots.landscape figure{flex:0 0 min(100%,560px)}
+.shots.landscape img{border-radius:14px}
 
 /* Footer */
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:20px 0;background:var(--card)}
@@ -213,6 +215,15 @@ footer a{padding:4px 0}
 .t-junkweight footer{background:#121417}
 .t-junkweight .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(224,160,90,.45),rgba(78,88,102,.4) 50%,transparent 70%)}
 .t-junkweight main>ol>li:nth-child(3n+1)::before{background:#d4893a}.t-junkweight main>ol>li:nth-child(3n+2)::before{background:#8aa0b5}.t-junkweight main>ol>li:nth-child(3n)::before{background:#6b7280}
+
+/* ---------- Showfield (ranch cream / pasture green, matches the r1 ranch screen) ---------- */
+.t-showfield{--bg:#f4f6ef;--ink:#1c3a28;--muted:#4d6758;--card:#ffffff;--line:#d5e0d4;--accent:#2f7046;--accent-ink:#f4fff6;--a2:#e09a3c;--link:#245a38;--status:#245a38;--shadow:0 10px 30px -16px rgba(28,58,40,.28);--hdr:#2f7046;--hero1:#2f7046;--hero2:#6b8f4e;--tag:#f3d18a;--glow:rgba(224,154,60,.35);--hfont:Georgia,"Palatino Linotype",serif;--hweight:700;--hcase:none;--hspace:0;--hstyle:normal;
+  --hero-pattern:radial-gradient(circle at 18px 16px,rgba(255,255,255,.2) 2px,transparent 3px);
+  --hero-pattern-size:88px 76px;
+  --hero-floor-h:48px;--hero-floor:linear-gradient(#6b8f4e,#3d6a45)}
+.t-showfield footer{background:#245a38}
+.t-showfield .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(243,209,138,.7),rgba(107,143,78,.4) 45%,transparent 68%)}
+.t-showfield main>ol>li:nth-child(3n+1)::before{background:#2f7046}.t-showfield main>ol>li:nth-child(3n+2)::before{background:#e09a3c}.t-showfield main>ol>li:nth-child(3n)::before{background:#6b8f4e}
 
 /* ---------- Vigil (night/gold) ---------- */
 .t-vigil{--bg:#0b0e13;--card:#151a22;--line:#2a303b;--accent:#d4a547;--accent-ink:#17120a;--a2:#e9c46a;--link:#e9c46a;--status:#e9c46a;--hdr:#0b0e13;--hero1:#06090d;--hero2:#1c1f27;--tag:#e9c46a;--glow:rgba(212,165,71,.35);--hfont:Georgia,"Times New Roman",serif;--hweight:700}
