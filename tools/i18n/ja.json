@@ -378,5 +378,15 @@
  "<strong>The county show.</strong> On day 6, enter posted classes. Ribbons depend on skill, mood, bond, and turnout.": "<strong>郡のショー。</strong>6日目に掲示された種目に出場します。リボンは技能、気分、絆、身だしなみで決まります。",
  "{0} screenshot: The garage for JW01 Crane Run, with a Frame, Cell and Skates fitted under a mass cap of 10": "{0}のスクリーンショット：JW01 Crane Runのガレージ。質量上限10の中にFrame、Cell、Skatesを載せたところ",
  "The garage, where you build to each fight's mass, power, and hardpoint cap": "試合ごとの質量・電力・ハードポイント上限に合わせて組み立てるガレージ",
- "Run a small ranch of ponies and pups, each with its own personality. Read morning cues and body language to learn a hidden temperament, then plan five days of care and training so the right animal is ready for the county show.": "それぞれ性格の違うポニーと子犬がいる小さな牧場を営みましょう。朝の合図と身ぶりを読んで隠れた気質を知り、5日間の世話と訓練を計画して、郡のショーにぴったりの動物を仕上げます。"
+ "Run a small ranch of ponies and pups, each with its own personality. Read morning cues and body language to learn a hidden temperament, then plan five days of care and training so the right animal is ready for the county show.": "それぞれ性格の違うポニーと子犬がいる小さな牧場を営みましょう。朝の合図と身ぶりを読んで隠れた気質を知り、5日間の世話と訓練を計画して、郡のショーにぴったりの動物を仕上げます。",
+ "{0} is a side-scrolling shooter about escorting the last supply truck. Read the scout report, pick your ammo, and aim every shot. In development.": "{0}は、最後の補給トラックを護衛する横スクロールシューティングです。偵察報告を読み、弾薬を選び、一発ごとに照準します。開発中。",
+ "Walk the last supply truck across zombie country. You aim every shot.": "ゾンビの国を横断し、最後の補給トラックを導きましょう。一発ごとにあなたが照準します。",
+ "You escort the truck stretch by stretch. Read the scout report, pick two ammo types in the workshop, and spend scrap on the gun or the truck. Then walk the truck bed, aim, fire, and patch the hull between waves.": "区間ごとにトラックを護衛します。偵察報告を読み、作業場で弾薬を2種類選び、スクラップを銃かトラックに使います。それから荷台を歩き、狙い、撃ち、ウェーブの合間に車体を修理します。",
+ "If you like reading the next fight and building to it, {0} is built for that. Match Ball, Buckshot, or AP slugs to Shamblers, Runners, Brutes, and Armored, and keep the truck rolling through Farm Road and the Overpass.": "次の戦いを読んで備えを整えるのが好きなら、{0}はそのために作られています。Ball、Buckshot、AP slugをShambler、Runner、Brute、Armoredに合わせ、Farm RoadとOverpassをトラックで走り抜けましょう。",
+ "{0} screenshot: The home screen, with Stretch 1/2, 15 scrap, and Start the convoy": "{0}のスクリーンショット：ホーム画面。Stretch 1/2、スクラップ15、Start the convoy",
+ "The home screen, ready to start stretch 1 of 2 with 15 scrap": "スクラップ15で2区間のうち1区間目を始める準備ができたホーム画面",
+ "<strong>Scout and workshop.</strong> See which zombies are coming, pick two ammo types, and buy upgrades, repairs, and patch kits. Every upgrade shows before and after numbers.": "<strong>偵察と作業場。</strong>どのゾンビが来るかを見て、弾薬を2種類選び、アップグレード、修理、パッチキットを買います。どのアップグレードも前後の数値が表示されます。",
+ "<strong>The roll-out.</strong> Four waves on a side-on road. Walk the truck bed, aim all around, reload, swap ammo, and patch the truck between waves.": "<strong>出発。</strong>横から見た道路で4ウェーブ。荷台を歩き、全方位に照準し、装填し、弾薬を替え、ウェーブの合間にトラックを修理します。",
+ "<strong>Two stretches.</strong> Farm Road and Overpass, with a scavenge stop after the first clear. If the truck goes down, rewind to that stretch's scout report and re-plan.": "<strong>2つの区間。</strong>Farm RoadとOverpass。最初のクリアのあとに回収の立ち寄りがあります。トラックが倒れたら、その区間の偵察報告まで巻き戻して立て直します。",
+ "Android first, then iPhone. Play is offline and single-player, in English or Spanish. {0} is a working title.": "まずAndroid、次にiPhone。プレイはオフラインのシングルプレイで、英語またはスペイン語です。{0}は仮題です。"
 }
