@@ -189,6 +189,15 @@ footer a{padding:4px 0}
 .t-skylease .hero-art .orb{width:230px;height:230px;background:linear-gradient(#ffd23f,#ff7b3c 55%,#ff3cac);mask:repeating-linear-gradient(180deg,#000 0 18px,transparent 18px 23px);-webkit-mask:repeating-linear-gradient(180deg,#000 0 18px,transparent 18px 23px);opacity:.9}
 .t-skylease h2{color:#ffe1f3;text-shadow:0 0 12px rgba(255,60,172,.55)}
 
+/* ---------- Bloomcross (garden / rose, matches the r1 shop counter) ---------- */
+.t-bloomcross{--bg:#f3f6ee;--ink:#1c3a2a;--muted:#4a6758;--card:#ffffff;--line:#d5e0d4;--accent:#1c5c3e;--accent-ink:#f4fff6;--a2:#b0436f;--link:#8a3358;--status:#8a3358;--shadow:0 10px 30px -16px rgba(28,58,42,.28);--hdr:#143528;--hero1:#143528;--hero2:#6b2d4a;--tag:#f3d18a;--glow:rgba(176,67,111,.35);--hfont:Georgia,"Palatino Linotype",serif;--hweight:700;--hcase:none;--hspace:0;--hstyle:normal;
+  --hero-pattern:radial-gradient(circle at 18px 16px,rgba(255,255,255,.2) 2px,transparent 3px),radial-gradient(circle at 64px 44px,rgba(243,209,138,.28) 3px,transparent 4px);
+  --hero-pattern-size:88px 76px;
+  --hero-floor-h:52px;--hero-floor:linear-gradient(#3d6a45,#2a4a32)}
+.t-bloomcross footer{background:#143528}
+.t-bloomcross .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(243,209,138,.7),rgba(176,67,111,.35) 45%,transparent 68%)}
+.t-bloomcross main>ol>li:nth-child(3n+1)::before{background:#1c5c3e}.t-bloomcross main>ol>li:nth-child(3n+2)::before{background:#b0436f}.t-bloomcross main>ol>li:nth-child(3n)::before{background:#f3d18a}
+
 /* ---------- Vigil (night/gold) ---------- */
 .t-vigil{--bg:#0b0e13;--card:#151a22;--line:#2a303b;--accent:#d4a547;--accent-ink:#17120a;--a2:#e9c46a;--link:#e9c46a;--status:#e9c46a;--hdr:#0b0e13;--hero1:#06090d;--hero2:#1c1f27;--tag:#e9c46a;--glow:rgba(212,165,71,.35);--hfont:Georgia,"Times New Roman",serif;--hweight:700}
 .t-vigil .hero-art .orb{width:260px;height:260px;background:conic-gradient(#e9c46a 0 70%,rgba(233,196,106,.12) 70% 100%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%)}
