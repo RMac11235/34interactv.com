@@ -206,6 +206,14 @@ footer a{padding:4px 0}
 .t-stitchwise .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(239,228,200,.75),rgba(155,106,184,.4) 45%,transparent 68%)}
 .t-stitchwise main>ol>li:nth-child(3n+1)::before{background:#6a4f9c}.t-stitchwise main>ol>li:nth-child(3n+2)::before{background:#c9a227}.t-stitchwise main>ol>li:nth-child(3n)::before{background:#9b6ab8}
 
+/* ---------- JunkWeight (scrapyard steel / rust, matches the home icon) ---------- */
+.t-junkweight{--bg:#1a1d21;--ink:#e8eaed;--muted:#9aa3ad;--card:#24282e;--line:#3a4149;--accent:#d4893a;--accent-ink:#1a1208;--a2:#8aa0b5;--link:#e0a05a;--status:#e0a05a;--shadow:0 10px 30px -12px rgba(0,0,0,.65);--hdr:#16191d;--hero1:#2a3038;--hero2:#4e5866;--tag:#e0a05a;--glow:rgba(212,137,58,.35);--hfont:"Segoe UI",system-ui,sans-serif;--hweight:800;--hcase:none;--hspace:0;--hstyle:normal;
+  --hero-pattern:repeating-linear-gradient(90deg,transparent 0 18px,rgba(255,255,255,.05) 18px 19px),repeating-linear-gradient(0deg,transparent 0 18px,rgba(255,255,255,.04) 18px 19px);
+  --hero-pattern-size:auto;--hero-floor-h:40px;--hero-floor:linear-gradient(#3a3228,#1a1d21)}
+.t-junkweight footer{background:#121417}
+.t-junkweight .hero-art .orb{background:radial-gradient(circle at 35% 30%,rgba(224,160,90,.45),rgba(78,88,102,.4) 50%,transparent 70%)}
+.t-junkweight main>ol>li:nth-child(3n+1)::before{background:#d4893a}.t-junkweight main>ol>li:nth-child(3n+2)::before{background:#8aa0b5}.t-junkweight main>ol>li:nth-child(3n)::before{background:#6b7280}
+
 /* ---------- Vigil (night/gold) ---------- */
 .t-vigil{--bg:#0b0e13;--card:#151a22;--line:#2a303b;--accent:#d4a547;--accent-ink:#17120a;--a2:#e9c46a;--link:#e9c46a;--status:#e9c46a;--hdr:#0b0e13;--hero1:#06090d;--hero2:#1c1f27;--tag:#e9c46a;--glow:rgba(212,165,71,.35);--hfont:Georgia,"Times New Roman",serif;--hweight:700}
 .t-vigil .hero-art .orb{width:260px;height:260px;background:conic-gradient(#e9c46a 0 70%,rgba(233,196,106,.12) 70% 100%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 63%,transparent 64%)}
